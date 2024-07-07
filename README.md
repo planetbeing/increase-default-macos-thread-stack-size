@@ -1,0 +1,1 @@
+The default stack size when using the pthread_create API on macOS is ridiculously tiny (512 KiB). Ports of software from other OSes sometimes do not take this into account. This allows altering the default without binary patching programs.

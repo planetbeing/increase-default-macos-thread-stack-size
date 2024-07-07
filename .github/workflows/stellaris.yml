@@ -1,0 +1,25 @@
+name: Create Release for Stellaris
+
+on: push
+
+jobs:
+  build:
+    name: Create Release
+    runs-on: macos-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Build
+        run: |
+          make test
+          mkdir stellaris
+          cp increase-default-macos-thread-stack-size.dylib targets/stellaris/* stellaris/
+          pushd stellaris && zip ../stellaris.zip * && popd
+      - name: Create Release
+        id: create_release
+        uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: latest
+          files: |
+            stellaris.zip

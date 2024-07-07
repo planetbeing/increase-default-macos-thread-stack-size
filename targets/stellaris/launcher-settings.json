@@ -1,0 +1,47 @@
+{
+	"gameId": "stellaris",
+	"version": "Andromeda v3.12.5 (9a6f)",
+	"rawVersion": "v3.12.5",
+	"distPlatform": "steam",
+	"gameDataPath": "~/Documents/Paradox Interactive/Stellaris",
+	"ingameSettingsLayoutPath": "settings-layout.json",
+	"themeFile": "./assets/theme-settings.json",
+	"browserDlcUrl": "https://store.steampowered.com/dlc/281990/Stellaris/",
+	"exePath": "./stellaris.app/Contents/MacOS/stellaris",
+	"exeArgs": [ "-gdpr-compliant" ]
+		,"alternativeExecutables": [
+        {
+			"exePath": "./stellaris.app/Contents/MacOS/stellaris",
+			"exeArgs": ["-gdpr-compliant", "-nakama"],
+			"label": {
+        	        "de": "Shopübergreifender Mehrspielermodus",
+        	        "en": "Cross-Store Multiplayer",
+        	        "es": "Juego cruzado entre plataformas",
+        	        "fr": "Multijoueur multiplateforme",
+        	        "ja": "クロスストア・マルチプレイヤー",
+        	        "ko": "크로스-스토어 멀티플레이어",
+        	        "pl": "Gra wieloosobowa (wszystkie platformy PC)",
+        	        "pt": "Multijogador entre Lojas",
+        	        "ru": "Кроссплатформенный сетевой режим",
+        	        "tr": "Mağazalar Arası Multiplayer",
+        	        "zh-hans": "跨平台多人联机",
+        	        "zh-hant": "跨平台多人遊戲"
+			},
+			"visibleIn": [
+        	        "GAME_SETTINGS",
+        	        "HOME_PAGE"
+    		]
+		},
+        {
+			"exePath": "./stellaris-increased-stack-size.sh",
+			"exeArgs": ["-gdpr-compliant"],
+			"label": {
+        	        "en": "Increased Stack Size"
+			},
+			"visibleIn": [
+        	        "GAME_SETTINGS",
+        	        "HOME_PAGE"
+    		]
+		}
+	]
+							}
